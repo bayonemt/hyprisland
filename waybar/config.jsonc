@@ -1,0 +1,129 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "spacing": 6,
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+
+  "modules-center": [
+    "custom/music-popup",
+    "clock"
+  ],
+
+  "modules-right": [
+    "pulseaudio",
+    "custom/mic",
+    "custom/power",
+    "tray"
+  ],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}"
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 50
+  },
+
+  "clock": {
+    "format": "  {:%H:%M}",
+    "tooltip": false,
+    "on-click": "$HOME/.config/hypr/scripts/toggle-calendar-popup.sh"
+  },
+
+  "cpu": {
+    "format": "󰍛 {usage}%"
+  },
+
+  "memory": {
+    "format": "󰘚 {}%"
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "󰔄 {temperatureC}°C"
+  },
+
+  "network": {
+    "format-wifi": "  {signalStrength}%",
+    "format-ethernet": "󰈀 Ethernet",
+    "format-disconnected": "󰖪 Offline",
+    "tooltip-format": "{ipaddr}"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁 muted",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+
+  "custom/mic": {
+    "exec": "pactl get-source-mute @DEFAULT_SOURCE@ | awk '{print $2}' | grep -Eq 'yes|sim' && echo ' muted' || echo ' on'",
+    "interval": 1,
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "return-type": "text"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+
+    "format": "{icon} {capacity}%",
+
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+
+  "custom/music": {
+    "exec": "$HOME/.config/waybar/scripts/music-waybar.py",
+    "interval": 1,
+    "on-click": "$HOME/.config/waybar/scripts/music-popup.py",
+    "format": "  {}",
+    "return-type": "text",
+    "max-length": 45,
+    "tooltip": false
+  },
+
+
+  "custom/music-popup": {
+    "format": " ",
+    "on-click": "$HOME/.config/hypr/scripts/toggle-music-popup.sh",
+    "tooltip": false
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout",
+    "tooltip": false
+  },
+
+  "tray": {
+    "spacing": 10
+  }
+}

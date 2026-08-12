@@ -1,0 +1,120 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 15px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(21, 18, 27, 0);
+    color: #cdd6f4;
+}
+
+tooltip {
+    background: #1e1e2e;
+    border-radius: 10px;
+    border: 2px solid #11111b;
+}
+
+#workspaces {
+    background: #1e1e2e;
+    opacity: 0.85;
+    border-radius: 10px;
+    margin: 10px 0 0 10px;
+    padding: 0 5px;
+    border: 1px solid #181825;
+}
+
+#workspaces button {
+    padding: 5px 8px;
+    color: #636777;
+    border-radius: 6px;
+}
+
+#workspaces button.active {
+    background-color: #313244;
+    color: #cdd6f4;
+}
+
+#workspaces button:hover {
+    background: #313244;
+    color: #cdd6f4;
+}
+
+#window {
+    background: #1e1e2e;
+    opacity: 0.85;
+    border-radius: 10px;
+    margin: 10px 0 0 10px;
+    padding: 0 14px;
+    border: 1px solid #181825;
+}
+
+#clock,
+#custom-music-popup,
+#pulseaudio,
+#custom-mic,
+#custom-power,
+#tray {
+    background: #1e1e2e;
+    opacity: 0.85;
+    padding: 0 14px;
+    margin: 10px 0 0 0;
+    border-top: 1px solid #181825;
+    border-bottom: 1px solid #181825;
+}
+
+#custom-music-popup {
+    color: #cdd6f4;
+    min-width: 18px;
+    padding: 0 10px;
+    margin: 10px 0 0 10px;
+    border-radius: 10px 0 0 10px;
+    border-left: 1px solid #181825;
+    border-right: 0px;
+}
+
+#custom-music-popup:hover {
+    background: #313244;
+}
+
+#clock {
+    color: #fab387;
+    border-radius: 0 10px 10px 0;
+    border-right: 1px solid #181825;
+    border-left: 0px;
+}
+
+#pulseaudio {
+    color: #89b4fa;
+    border-left: 1px solid #181825;
+    border-right: 0px;
+    border-radius: 10px 0 0 10px;
+}
+
+#custom-mic {
+    color: #cba6f7;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#custom-power {
+    color: #f38ba8;
+    border-left: 0px;
+    border-right: 1px solid #181825;
+    border-radius: 0 10px 10px 0;
+    margin-right: 10px;
+}
+
+#tray {
+    border-radius: 10px;
+    border: 1px solid #181825;
+    margin-right: 10px;
+    margin-left: 6px;
+}
+
+#pulseaudio.muted {
+    color: #6c7086;
+}

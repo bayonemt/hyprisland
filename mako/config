@@ -1,0 +1,8 @@
+# Aumenta o histórico de notificações guardado pelo mako, usado pela
+# aba de notificações do popup de música (Quickshell).
+max-history=50
+
+# Modo "não perturbar", controlado pelo toggle na aba de Quick Settings
+# do popup de música (makoctl mode -t do-not-disturb).
+[mode=do-not-disturb]
+invisible=1
