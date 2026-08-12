@@ -8,6 +8,12 @@ My personal Hyprland + Waybar setup, built around a custom [Quickshell](https://
 
 It's opened by clicking the small note icon in the waybar bar (`custom/music-popup` module), which toggles a flag file that a persistent Quickshell process polls.
 
+## Preview
+
+| Música | Notificações | Ajustes |
+|---|---|---|
+| ![Música tab](docs/preview-music.png) | ![Notificações tab](docs/preview-notifications.png) | ![Ajustes tab](docs/preview-settings.png) |
+
 ## Layout
 
 This mirrors `~/.config/`, so each top-level folder here maps 1:1 to a folder there:
